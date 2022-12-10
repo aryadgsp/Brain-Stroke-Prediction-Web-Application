@@ -1,0 +1,141 @@
+/* Google Fonts - Poppins */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+body{
+  background-color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.sp{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2{
+    color: rgb(41, 9, 72);
+    font-size: 40px;
+    font-weight: bolder;
+}
+h3{
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 3rem;
+}
+.slide-container{
+  display: flex;
+  max-width: 1120px;
+  width: 100rem;
+  height: 50rem;
+  padding: 40px 0;
+  background-color: white;
+}
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  height: 41rem;
+  border-radius: 25px;
+  padding-top: 2rem;
+  margin-bottom: 4rem;
+}
+.card{
+  height: 34rem;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: inset 0 0 5px rgb(26, 5, 47);
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-content{
+  position: relative;
+  padding: 15px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: transparent;
+}
+.card-image{
+  position: relative;
+  margin-top: 3rem;
+  height: 200px;
+  width: 250px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+}
+.btn2{
+  font-size: 20px;  
+  margin-top: 3rem;
+  height:3rem; 
+  width: 11.5rem; 
+  border-radius: 15px;
+  color: white; 
+  background-image: linear-gradient(to left,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2%, rgba(30,2,83,1) 44.2%); 
+}
+.button:hover{
+  background: rgb(41, 9, 72);
+}
+
+.swiper-navBtn{
+  color: transparent;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: transparent;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: transparent;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color:transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+    margin-bottom: 2rem;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
+}

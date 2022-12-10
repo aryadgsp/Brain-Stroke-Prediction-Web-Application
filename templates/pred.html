@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <link rel= "stylesheet" href= "styles/pred.css">
+    <link rel= "stylesheet" href="{{ url_for('static',filename='assets/css/pred.css') }}">
+
+    <title>Stroke Prediction</title>
+</head>
+<nav style="height: 65px;padding-left: 0;padding-right: 0;" class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid" style="padding-left: 1rem; background-color: #f8f9fb;">
+        <!-- Toggle button -->
+        <button
+          style="background-image: linear-gradient(35deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2%, rgba(30,2,83,1) 44.2%);"
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarRightAlignExample"
+          aria-controls="navbarRightAlignExample"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i style="color: white;" class="fas fa-bars"></i>
+        </button>
+      <!-- Left elements -->
+      
+      <a class="navbar-brand" href="{{url_for("index")}}">
+        <i class="logo"><img style="width: 35px; margin-right: -13px;" src="{{ url_for('static',filename='assets/img/logo.png') }}" alt="logo"></i>
+      </a>
+      <div style="font-weight: bold; font-size: 20px; color: rgb(41, 9, 72)" class="collapse navbar-collapse" id="navbarRightAlignExample">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for("services")}}">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for("location")}}">Our Location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for("help")}}">Help</a>
+          </li>
+        </ul>
+        <a target="_blank" class="navbar-brand" href="https://api.whatsapp.com/send?phone=6285704945420&text=Halo SETROK, saya ingin berkonsultasi dengan anda">
+          <button style="font-weight: bold;font-size: 15px; border-radius: 15px; height:2rem; width: 8rem; color: white; background-image: linear-gradient(to left,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2%, rgba(30,2,83,1) 44.2%); transition: 0.5s;" type="submit" value="submit">CONTACT US</button>
+        </a>
+      </div>
+
+      <a class="navbar-brand" href="#">
+        <i style="color: rgb(41, 9, 72);" class="fas fa-search"></i>
+      </a>
+
+</nav>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+<body>
+  <div class="container">
+    <div class="pages">
+      <div class="sp">
+          <h2>Stroke Prediction</h2>
+      </div>
+      <form action="http://10.10.10.237:5000/prediction" method="POST" class="needs-validation" novalidate>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationTooltip01">Gender</label>
+              <select class="custom-select" name="gender" id="validationTooltip03" required>
+                <option value="">Gender</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+              </select>
+              <div class="invalid-tooltip">Please select your gender.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="validationTooltip02">Age</label>
+              <input type="number" name="age" class="form-control" id="validationTooltip02" placeholder="Age" required>
+              <div class="invalid-tooltip">
+                  Please input your age.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationTooltip02">Height</label>
+              <input type="number" name="height" class="form-control" id="validationTooltip02" placeholder="Height" required>
+              <div class="invalid-tooltip">
+                  Please input your height.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="validationTooltip02">Weight</label>
+              <input type="number" name="weight" class="form-control" id="validationTooltip02" placeholder="Weight" required>
+              <div class="invalid-tooltip">
+                  Please input your weight.
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationTooltip03">Hypertension</label>
+              <select class="custom-select" name="hypertension" id="validationTooltip03" required>
+                <option value="">Hypertension</option>
+                <option value="0">Doesn't have</option>
+                <option value="1">Have</option>
+              </select>
+              <div class="invalid-tooltip">Do you have hypertension?, please choose one.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="validationTooltip04">Heart Diseases</label>
+              <select class="custom-select" name="heart" id="validationTooltip03" required>
+                <option value="">Heart Diseases</option>
+                <option value="0">Doesn't have</option>
+                <option value="1">Have</option>
+              </select>
+              <div class="invalid-tooltip">Do you have any heart diseases?, please choose one.</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationTooltip05">Ever maried</label>
+              <select class="custom-select" name="maried" id="validationTooltip03" required>
+                <option value="">Ever maried</option>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+              </select>
+              <div class="invalid-tooltip">Have you ever been married?, please choose one.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="validationTooltip06">Work Type</label>
+              <select class="custom-select" name="work" id="validationTooltip03" required>
+                <option value="">Work Type</option>
+                <option value="3">Children</option>
+                <option value="0">Government Jobs</option>
+                <option value="2">Self Employed</option>
+                <option value="1">Private</option>
+                <!-- <option value="Never_worked">Never Worked</option> -->
+              </select>
+              <div class="invalid-tooltip">Please select a type of your work.</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationTooltip07">Residence Type</label>
+              <select class="custom-select" name="residence" id="validationTooltip03" required>
+                <option value="">Residence Type</option>
+                <option value="0">Rural</option>
+                <option value="1">Urban</option>
+              </select>
+              <div class="invalid-tooltip">Please select the type of residence you currently live in.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="validationTooltip08">Average Glucose Level</label>
+              <input type="number" name="glukose" class="form-control" id="validationTooltip08" placeholder="Average Glucose Level" required>
+              <div class="invalid-tooltip">
+                  Please input your average glucose level in your blood.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <label for="validationTooltip10">Smoking Status</label>
+              <select class="custom-select" name="smoke" id="validationTooltip10" required>
+                <option value="">Smoking Status</option>
+                <option value="1">Formerly Smoked</option>
+                <option value="3">Smokes</option>
+                <option value="2">never Smoked</option>
+                <option value="0">Unknown</option>
+              </select>
+              <div class="invalid-tooltip">Please select the type of residence you currently live in.</div>
+            </div>
+            <div class="but">
+              <button class="btn2" type="submit" value="submit">
+                <span>
+                  PREDICT
+                </span>
+              </button>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
+  <div class="end">
+    {% if pred == 1 %}
+    <div class="hasil">
+      <h2 class="titlehasil">Hasil</h2>
+      <h3 class="hasil1">Diperkirakan Mengalami Stroke</h3>
+      <hr>
+      <h5 class="tips">Tips</h5>
+      <p class="text2">Ayo berhenti merokok, rutin berolahraga, dan megonsumsi makanan sehat atau bergizi seimbang untuk meminimalisir risiko penyakit stroke.</p>
+      <p class="text2">Segera konsultasikan dengan dokter pilihan anda untuk mendapat perawatan khusus.</p>
+      <hr>
+      <a target="_blank" class="navbar-brand" href="{{url_for("tips")}}">
+        <button class="tip"  type="submit" value="submit">Tips</button>
+      </a>
+    </div>
+    {% elif pred == 0 %}
+    <div class="hasil">
+      <h2 class="titlehasil">Hasil</h2>
+      <h3 class="hasil1">Diperkirakan Bebas Dari Stroke</h3>
+      <hr>
+      <h5 class="tips">Tips</h5>
+      <p class="text2">Tetap jaga kesehatan tubuh dengan rutin olahraga, mengonsumsi makanan sehat, dan berbudaya hidup sehat.</p>
+      <p class="text2">Apabila mengalami gejala stroke, konsultasikan dengan dokter.</p>
+      <hr>
+      <a target="_blank" class="navbar-brand" href="{{url_for("tips")}}">
+        <button class="tip" type="submit" value="submit">Tips</button>
+      </a>
+    </div>
+    {% endif %}
+</div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+      })();
+      </script>
+</body>
+<footer class="text-lg-start text-white" style="background-image: linear-gradient( -145deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2% );">
+    <!-- Grid container -->
+    <br>
+    <div class="text-center container p-4">
+      <!-- Section: Social media -->
+      <section class="">
+        <!-- Whatsapp -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://api.whatsapp.com/send?phone=6285704945420&text=Halo SETROK, saya ingin berkonsultasi dengan anda" target="_blank" role="button"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.co.id/" target="_blank" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/ftmmunair/" target="_blank" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+    <div class="p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">
+            SETROK
+          </h6>
+          <!--<hr style="background-image: linear-gradient(90deg,#7A2180 16.67%,#E40276 95.31%);" class="hr-height background-gradient-padrao">-->
+          <p>
+            SETROK can help you treat, protect, and relieve stroke symptoms. We can help you detect stroke early and find the best hospital location for you.
+          </p>
+        </div>
+        <!-- Grid column -->
+        <hr class="w-100 clearfix d-md-none" />
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">
+            Useful links
+          </h6>
+          <p>
+            <a style="font-weight: 100;" href="{{url_for("index")}}" class="text-white">Home</a>
+          </p>
+          <p>
+            <a style="font-weight: 100;" href="{{url_for("services")}}" class="text-white">Service</a>
+          </p>
+          <p>
+            <a style="font-weight: 100;" href="{{url_for("prediction")}}" class="text-white">Stroke Prediction Test</a>
+          </p>
+
+          <p>
+            <a style="font-weight: 100;" href="{{url_for("tips")}}" class="text-white">Tips</a>
+          </p>
+          <p>
+            <a style="font-weight: 100;" href="{{url_for("location")}}" class="text-white">Our Location</a>
+          </p>
+          <p>
+            <a style="font-weight: 100;" href="{{url_for("help")}}" class="text-white">Help</a>
+          </p>
+      </div>
+      <!-- Grid column -->
+      <hr class="w-100 clearfix d-md-none" />
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Find us!</h6>
+        <p><i class="fas fa-home mr-3"></i> Jl. Dharmahusada Permai, Mulyorejo, Kec. Mulyorejo, Kota SBY, Jawa Timur 60115</p>
+        <p><i class="fas fa-envelope mr-3"></i> SETROK@gmail.com</p>
+        <p><i class="fas fa-phone mr-3"></i> + 62 878 9960 8728</p>
+        <p><i class="fas fa-print mr-3"></i> + 62 857 0494 5420</p>
+      </div>
+      <!-- Grid column -->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright
+    </div>
+    <!-- Copyright -->
+</footer>
+</html>

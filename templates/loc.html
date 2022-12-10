@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+    <title>Our Location</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/loc.css') }}" media="screen">
+    <!-- <link rel= "stylesheet" href= "{{ url_for('static', filename='styles/loc.css') }}">-->
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/nicepage.css') }}" media="screen">
+    <!---->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <nav style="height: 65px;padding-left: 0;padding-right: 0;" class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid" style="padding-left: 1rem; background-color: #f8f9fb;">
+        <!-- Toggle button -->
+        <button
+          style="background-image: linear-gradient(35deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2%, rgba(30,2,83,1) 44.2%);"
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarRightAlignExample"
+          aria-controls="navbarRightAlignExample"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i style="color: white;" class="fas fa-bars"></i>
+        </button>
+      <!-- Left elements -->
+      
+      <a class="navbar-brand" href="{{url_for("index")}}">
+        <i class="logo"><img style="width: 35px; margin-right: -13px;" src="{{ url_for('static',filename='assets/img/logo.png') }}" alt="logo"></i>
+      </a>
+      <div style="font-weight: bold; font-size: 20px; color: rgb(41, 9, 72)" class="collapse navbar-collapse" id="navbarRightAlignExample">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for("services")}}">Services</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for("location")}}">Our Location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for("help")}}">Help</a>
+          </li>
+        </ul>
+        <!-- Left elements -->
+        <!-- Right elements -->
+        <!-- Contact Us -->
+        <a class="navbar-brand" href="https://api.whatsapp.com/send?phone=6285704945420&text=Halo SETROK, saya ingin berkonsultasi dengan anda">
+          <button style="font-weight: bold;font-size: 15px; border-radius: 15px; height:2rem; width: 8rem; color: white; background-image: linear-gradient(to left,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2%, rgba(30,2,83,1) 44.2%); transition: 0.5s;" type="submit" value="submit">CONTACT US</button>
+        </a>
+      </div>
+      <!-- Right elements -->
+      
+      <!-- Search -->
+      <a class="navbar-brand" href="#">
+        <i style="color: rgb(41, 9, 72);" class="fas fa-search"></i>
+      </a>
+      
+  </nav>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+    <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix" id="sec-ed80"><div class="u-clearfix u-valign-middle u-sheet-1">
+                  </div>
+                </div>
+                <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+              </div>
+            </nav>
+          </div></header>
+        <section class="u-align-center u-clearfix u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-section-1" id="carousel_6c1e">
+          <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+            <h2 style="color: rgb(41, 9, 72);" class="u-text u-text-1">FIND Us</h2>
+            <div style="color: rgb(41, 9, 72);" class="u-border-7 u-line u-line-horizontal u-line-1"></div>
+            <p class="u-text u-text-2">We align leaders around a shared purpose and strategic story that catalyzes their business and brand to take action.</p>
+            <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+              <div class="u-gutter-0 u-layout">
+                <div class="u-layout-row">
+                  <div class="u-size-30 u-size-60-md">
+                    <div class="u-layout-col">
+                      <div class="u-size-30">
+                        <div class="u-layout-row">
+                          <div class="u-align-center u-container-style u-gradient u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                            <div class="u-container-layout u-valign-middle u-container-layout-1"><span class="u-border-3 u-border-white u-icon u-icon-circle u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-bf5b"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-bf5b" style="enable-background:new 0 0 512 512;"><g><g><path d="M256,0C156.748,0,76,80.748,76,180c0,33.534,9.289,66.26,26.869,94.652l142.885,230.257    c2.737,4.411,7.559,7.091,12.745,7.091c0.04,0,0.079,0,0.119,0c5.231-0.041,10.063-2.804,12.75-7.292L410.611,272.22    C427.221,244.428,436,212.539,436,180C436,80.748,355.252,0,256,0z M384.866,256.818L258.272,468.186l-129.905-209.34    C113.734,235.214,105.8,207.95,105.8,180c0-82.71,67.49-150.2,150.2-150.2S406.1,97.29,406.1,180    C406.1,207.121,398.689,233.688,384.866,256.818z"></path>
+    </g>
+    </g><g><g><path d="M256,90c-49.626,0-90,40.374-90,90c0,49.309,39.717,90,90,90c50.903,0,90-41.233,90-90C346,130.374,305.626,90,256,90z     M256,240.2c-33.257,0-60.2-27.033-60.2-60.2c0-33.084,27.116-60.2,60.2-60.2s60.1,27.116,60.1,60.2    C316.1,212.683,289.784,240.2,256,240.2z"></path>
+    </g>
+    </g></svg></span>
+                              <h5 class="u-text u-text-white u-text-3">Address:</h5>
+                              <p class="u-text u-text-white u-text-4"> Jl. Dharmahusada Permai, Mulyorejo, Kec. Mulyorejo, Kota SBY, Jawa Timur 60115</p>
+                            </div>
+                          </div>
+                          <div class="u-container-style u-gradient u-layout-cell u-size-30 u-layout-cell-2">
+                            <div class="u-container-layout u-container-layout-2"><span class="u-border-3 u-border-white u-icon u-icon-circle u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 479.058 479.058" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8e94"></use></svg><svg class="u-svg-content" viewBox="0 0 479.058 479.058" id="svg-8e94"><path d="m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"></path></svg></span>
+                              <h5 class="u-align-center u-text u-text-white u-text-5">Email:</h5>
+                              <a href="#" class="u-border-active-none u-border-hover-none u-btn u-button-style u-none u-text-body-alt-color u-text-hover-palette-2-base u-btn-1">SETROK@gmail.com</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="u-size-30">
+                        <div class="u-layout-row">
+                          <div class="u-align-center u-container-style u-gradient u-layout-cell u-left-cell u-size-30 u-layout-cell-3">
+                            <div class="u-container-layout u-valign-middle u-container-layout-3"><span class="u-border-2 u-border-white u-icon u-icon-circle u-text-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 384 384" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5273"></use></svg><svg class="u-svg-content" viewBox="0 0 384 384" x="0px" y="0px" id="svg-5273" style="enable-background:new 0 0 384 384;"><g><g><path d="M353.188,252.052c-23.51,0-46.594-3.677-68.469-10.906c-10.906-3.719-23.323-0.833-30.438,6.417l-43.177,32.594    c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208,11.167-20.198,7.635-31.448    c-7.26-21.99-10.948-45.063-10.948-68.583C132.146,13.823,118.323,0,101.333,0H30.812C13.823,0,0,13.823,0,30.812    C0,225.563,158.438,384,353.188,384c16.99,0,30.813-13.823,30.813-30.813v-70.323C384,265.875,370.177,252.052,353.188,252.052z     M362.667,353.188c0,5.229-4.25,9.479-9.479,9.479c-182.99,0-331.854-148.865-331.854-331.854c0-5.229,4.25-9.479,9.479-9.479    h70.521c5.229,0,9.479,4.25,9.479,9.479c0,25.802,4.052,51.125,11.979,75.115c1.104,3.542,0.208,7.208-3.375,10.938L82.75,165.427    c-2.458,3.26-2.844,7.625-1,11.26c29.927,58.823,66.292,95.188,125.531,125.542c3.604,1.885,8.021,1.49,11.292-0.979    l49.677-37.635c2.51-2.51,6.271-3.406,9.667-2.25c24.156,7.979,49.479,12.021,75.271,12.021c5.229,0,9.479,4.25,9.479,9.479    V353.188z"></path>
+    </g>
+    </g></svg></span>
+                              <h5 class="u-text u-text-white u-text-6">Call us:</h5>
+                              <p class="u-text u-text-7">+ 62 878 9960 8728 <br>+ 62 857 0494 5420
+                              </p>
+                            </div>
+                          </div>
+                          <div class="u-align-center u-container-style u-gradient u-layout-cell u-size-30 u-layout-cell-4">
+                            <div class="u-container-layout u-container-layout-4">
+                              <h5 class="u-text u-text-white u-text-8">Contact Us</h5>
+                              <p class="u-text u-text-white u-text-9">Contact us for a quote. Help or to join the team.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-size-30 u-size-60-md">
+                    <div class="u-layout-col">
+                      <div class="u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-5">
+                        <div class="u-container-layout u-container-layout-5">
+                          <div class="u-expanded u-grey-light-2 u-map">
+                            <div class="embed-responsive">
+                              <iframe style="border-radius: 5%;" class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.7445835021254!2d112.78265551459498!3d-7.269879594752592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbdf60c8469f%3A0x3036be09c9fe39b6!2sRumah%20Sakit%20Universitas%20Airlangga%20(RS%20UNAIR)!5e0!3m2!1sid!2sid!4v1669692713433!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </body>
+<footer
+            class="text-lg-start text-white"
+            style="background-image: linear-gradient( -145deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2% );">
+      <!-- Grid container -->
+      <br>
+      <div class="text-center container p-4">
+        <!-- Section: Social media -->
+        <section class="">
+          <!-- Whatsapp -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://api.whatsapp.com/send?phone=6285704945420&text=Halo SETROK, saya ingin berkonsultasi dengan anda" target="_blank" role="button"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.co.id/" target="_blank" role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/ftmmunair/" target="_blank" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+      <div class="p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                SETROK
+              </h6>
+              <!--<hr style="background-image: linear-gradient(90deg,#7A2180 16.67%,#E40276 95.31%);" class="hr-height background-gradient-padrao">-->
+              <p>
+                SETROK can help you treat, protect, and relieve stroke symptoms. We can help you detect stroke early and find the best hospital location for you.
+              </p>
+            </div>
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                Useful links
+              </h6>
+              <p>
+                <a style="font-weight: 100;" href="{{url_for("index")}}" class="text-white">Home</a>
+              </p>
+              <p>
+                <a style="font-weight: 100;" href="{{url_for("services")}}" class="text-white">Service</a>
+              </p>
+              <p>
+                <a style="font-weight: 100;" href="{{url_for("prediction")}}" class="text-white">Stroke Prediction Test</a>
+              </p>
+              
+              <p>
+                <a style="font-weight: 100;" href="{{url_for("tips")}}" class="text-white">Tips</a>
+              </p>
+              <p>
+                <a style="font-weight: 100;" href="{{url_for("location")}}" class="text-white">Our Location</a>
+              </p>
+              <p>
+                <a style="font-weight: 100;" href="{{url_for("help")}}" class="text-white">Help</a>
+              </p>
+          </div>
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Find us!</h6>
+            <p><i class="fas fa-home mr-3"></i> Jl. Dharmahusada Permai, Mulyorejo, Kec. Mulyorejo, Kota SBY, Jawa Timur 60115</p>
+            <p><i class="fas fa-envelope mr-3"></i> SETROK@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 62 878 9960 8728</p>
+            <p><i class="fas fa-print mr-3"></i> + 62 857 0494 5420</p>
+          </div>
+          <!-- Grid column -->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright
+      </div>
+      <!-- Copyright -->
+    </footer>
+</html>

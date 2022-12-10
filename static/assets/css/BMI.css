@@ -1,0 +1,68 @@
+.BMI{
+    font-family: Montserrat, sans-serif;
+    padding: 2rem;
+    margin: 1.5rem;
+    text-align: center;
+}
+label{
+    font-size: 25px;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+}
+hr{
+    background-color: rgb(41, 9, 72);
+}
+.enter{
+    width: 25%;
+    align-items: center;
+    height: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+h1{
+    color: rgb(41, 9, 72);
+    text-align: center;
+    font-weight: bold;
+}
+button{
+    width: auto;
+    text-align: center;
+    border-radius: 5px;
+}
+.butt{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.btn-grad{
+    background-image: linear-gradient(to left,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2%, rgba(30,2,83,1) 44.2%);
+    padding: 10px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn-grad:hover {
+    background-position: center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+ 
+i{
+    color: white;
+}
+
+.hasil{
+    margin-top: 1rem;
+    font-size: 20px;
+    font-weight: 600;
+    color:rgb(41, 9, 72);
+}
+

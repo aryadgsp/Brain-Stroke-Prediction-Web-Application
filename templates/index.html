@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- <link rel= "stylesheet" href= "{{ url_for('static', filename='styles/sqrt.css') }}">-->
+    <link rel= "stylesheet" href="{{ url_for('static',filename='assets/css/home.css') }}">
+
+    <script defer scr="home.js"></script>
+
+    <title>Home</title>
+</head>
+<nav style="height: 65px;padding-left: 0;padding-right: 0;" class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid" style="padding-left: 1rem; background-color: #f8f9fb;">
+        <!-- Toggle button -->
+        <button
+          style="background-image: linear-gradient(35deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2%, rgba(30,2,83,1) 44.2%);"
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarRightAlignExample"
+          aria-controls="navbarRightAlignExample"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i style="color: white;" class="fas fa-bars"></i>
+        </button>
+      
+      <a class="navbar-brand" href="{{url_for("index")}}">
+        <i class="logo"><img style="width: 35px; margin-right: -13px;" src="{{ url_for('static',filename='assets/img/logo.png') }}" alt="logo"></i>
+      </a>
+      <div style="font-weight: bold; font-size: 20px; color: rgb(41, 9, 72)" class="collapse navbar-collapse" id="navbarRightAlignExample">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for("services")}}">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for("location")}}">Our Location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for("help")}}">Help</a>
+          </li>
+        </ul>
+        <!-- Left elements -->
+        <!-- Right elements -->
+        <!-- Contact Us -->
+        <a target="_blank" class="navbar-brand" href="https://api.whatsapp.com/send?phone=6285704945420&text=Halo SETROK, saya ingin berkonsultasi dengan anda">
+          <button style="font-weight: bold;font-size: 15px; border-radius: 15px; height:2rem; width: 8rem; color: white; background-image: linear-gradient(to left,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2%, rgba(30,2,83,1) 44.2%); transition: 0.5s;">CONTACT US</button>
+        </a>
+      </div>
+      
+      <!-- Search -->
+      <a class="navbar-brand" href="#">
+        <i style="color: rgb(41, 9, 72);" class="fas fa-search"></i>
+      </a>
+      
+</nav>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+<body>
+  <section class="hidden">
+    <div class="section1">
+      <div class="doc">
+        <div class="title">
+          <h3>Health Care</h3>
+          <h1 class="main">Stroke Prediction and Care</h1>
+        </div>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=6285704945420&text=Halo SETROK, saya ingin berkonsultasi dengan anda">
+          <button class="btn2">CONTACT US</button>
+        </a>
+      </div>
+      <div class="box">
+        
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </section>
+  <section class="hidden">
+    <div class="section2">
+      <div class="title">
+        <h3>Protect Yourself</h3>
+        <h1>Detect the Possibility of a Stroke in Yourself and Stay Healthy</h1>
+      </div>
+      <hr>
+      <a href="{{url_for("prediction")}}">
+          <button class="btn2">PREDICT</button>
+      </a>
+    </div>
+  </section>
+  <section class="hidden">
+    <div class="section3">
+      <div class="title">
+        <h1>Accelerate Protection for Patients and Communities</h1>
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                  <img src="{{ url_for('static',filename='assets/img/med.PNG') }}" alt="Medical" class="card-img">
+              </div>
+              <div class="card-content">
+                <h3 style="margin-top:3.5rem;" class="tit">Prevent</h3>
+            </div>
+            <p class="pup">Many strokes could be prevented through healthy lifestyle changes and working with your health care team to control health conditions that raise your risk for stroke.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+                <img src="{{ url_for('static',filename='assets/img/brain2.PNG') }}" alt="Brain" class="card-img">
+            </div>
+          </div>
+          <div class="card-content">
+              <h3 class="tit">Test</h3>
+          </div>
+          <p  class="pup">Basically, strokes can be prevented, even before symptoms occur. As is known, stroke has a close relationship with cholesterol levels in the blood and also blood pressure, and others.</p>
+        </div>
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+                <img src="{{ url_for('static',filename='assets/img/hand.PNG') }}" alt="hands" class="card-img">
+            </div>
+          </div>
+          <div class="card-content">
+              <h3 class="tit">Support</h3>
+          </div>
+          <p class="pup">SETROK can help you treat, protect, and relieve stroke symptoms. We can help you detect stroke early and find the best hospital location for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hidden">
+    <div class="section4">
+      <div class="title">
+        <h3>The Impact</h3>
+        <h1>We help many patients to avoid stroke</h1>
+      </div>
+      <p class="jmlh">869</p>
+      <h3>Patients</h3>
+    </div>
+  </section>
+</body>
+<footer class="text-lg-start text-white" style="background-image: linear-gradient( -145deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2% );">
+    <!-- Grid container -->
+    <br>
+    <div class="text-center container p-4">
+      <!-- Section: Social media -->
+      <section class="">
+        <!-- Whatsapp -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://api.whatsapp.com/send?phone=6285704945420&text=Halo SETROK, saya ingin berkonsultasi dengan anda" target="_blank" role="button"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.co.id/" target="_blank" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/ftmmunair/" target="_blank" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+    <div class="p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">
+            SETROK
+          </h6>
+          <!--<hr style="background-image: linear-gradient(90deg,#7A2180 16.67%,#E40276 95.31%);" class="hr-height background-gradient-padrao">-->
+          <p>
+            SETROK can help you treat, protect, and relieve stroke symptoms. We can help you detect stroke early and find the best hospital location for you.
+          </p>
+        </div>
+        <!-- Grid column -->
+        <hr class="w-100 clearfix d-md-none" />
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">
+            Useful links
+          </h6>
+          <p>
+            <a style="font-weight: 100;" href="{{url_for("index")}}" class="text-white">Home</a>
+          </p>
+          <p>
+            <a style="font-weight: 100;" href="{{url_for("services")}}" class="text-white">Service</a>
+          </p>
+          <p>
+            <a style="font-weight: 100;" href="{{url_for("prediction")}}" class="text-white">Stroke Prediction Test</a>
+          </p>
+          
+          <p>
+            <a style="font-weight: 100;" href="{{url_for("tips")}}" class="text-white">Tips</a>
+          </p>
+          <p>
+            <a style="font-weight: 100;" href="{{url_for("location")}}" class="text-white">Our Location</a>
+          </p>
+          <p>
+            <a style="font-weight: 100;" href="{{url_for("help")}}" class="text-white">Help</a>
+          </p>
+      </div>
+      <!-- Grid column -->
+      <hr class="w-100 clearfix d-md-none" />
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Find us!</h6>
+        <p><i class="fas fa-home mr-3"></i> Jl. Dharmahusada Permai, Mulyorejo, Kec. Mulyorejo, Kota SBY, Jawa Timur 60115</p>
+        <p><i class="fas fa-envelope mr-3"></i> SETROK@gmail.com</p>
+        <p><i class="fas fa-phone mr-3"></i> + 62 878 9960 8728</p>
+        <p><i class="fas fa-print mr-3"></i> + 62 857 0494 5420</p>
+      </div>
+      <!-- Grid column -->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright
+    </div>
+    <!-- Copyright -->
+</footer>
+</html>
